@@ -14,6 +14,6 @@ struct ToDoItem {
 
     init(title: String, description: String? = nil) {
         self.title = title
-        self.itemDescription = "Description"
+        self.itemDescription = description
     }
 }
