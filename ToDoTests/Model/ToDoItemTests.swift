@@ -29,5 +29,10 @@ class ToDoItemTests: XCTestCase {
     func testInit_ShouldTakeDescription(){
         _ = ToDoItem(title: "Title", description: "descripiton")
     }
+
+    func testInit_ShouldSetTitle(){
+        let todoItem = ToDoItem(title: "Another Title")
+        XCTAssertEqual(todoItem.title, "Another Title")
+    }
     
 }
