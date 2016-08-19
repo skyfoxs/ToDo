@@ -25,5 +25,9 @@ class ToDoItemTests: XCTestCase {
     func testInit_ShouldTakeTitle(){
         _ = ToDoItem(title : "Title")
     }
+
+    func testInit_ShouldTakeDescription(){
+        _ = ToDoItem(title: "Title", description: "descripiton")
+    }
     
 }
