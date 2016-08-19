@@ -13,6 +13,7 @@ import XCTest
 class ToDoItemTests: XCTestCase {
 
     var title: String!
+    var itemDescription: String!
 
     override func setUp() {
         super.setUp()
@@ -31,7 +32,7 @@ class ToDoItemTests: XCTestCase {
 
     func testInit_ShouldTakeDescription(){
         title = "Title"
-        _ = ToDoItem(title: title, description: "descripiton")
+        _ = ToDoItem(title: title, description: "description")
     }
 
     func testInit_ShouldSetTitle(){
@@ -39,5 +40,11 @@ class ToDoItemTests: XCTestCase {
         let todoItem = ToDoItem(title: title)
         XCTAssertEqual(todoItem.title, title)
     }
-    
+
+    func testInit_ShouldSetDescription(){
+        title = "Title"
+        itemDescription = "Description"
+        let todoItem = ToDoItem(title: title, description: itemDescription)
+        XCTAssertEqual(todoItem.itemDescription, itemDescription)
+    }
 }
