@@ -11,7 +11,9 @@ import XCTest
 @testable import ToDo
 
 class ToDoItemTests: XCTestCase {
-    
+
+    var title: String!
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,16 +25,19 @@ class ToDoItemTests: XCTestCase {
     }
 
     func testInit_ShouldTakeTitle(){
-        _ = ToDoItem(title : "Title")
+        title = "Title"
+        _ = ToDoItem(title : title)
     }
 
     func testInit_ShouldTakeDescription(){
-        _ = ToDoItem(title: "Title", description: "descripiton")
+        title = "Title"
+        _ = ToDoItem(title: title, description: "descripiton")
     }
 
     func testInit_ShouldSetTitle(){
-        let todoItem = ToDoItem(title: "Another Title")
-        XCTAssertEqual(todoItem.title, "Another Title")
+        title = "Another Title"
+        let todoItem = ToDoItem(title: title)
+        XCTAssertEqual(todoItem.title, title)
     }
     
 }
