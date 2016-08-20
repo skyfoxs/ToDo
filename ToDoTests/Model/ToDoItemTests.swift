@@ -54,4 +54,11 @@ class ToDoItemTests: XCTestCase {
         let todoItem = ToDoItem(title: title, description: itemDescription)
         XCTAssertEqual(todoItem.itemDescription, itemDescription)
     }
+
+    func testInit_ShouldSetTimeStamp(){
+        title = "Title"
+        itemDescription = "Description"
+        let todoItem = ToDoItem(title: title, description: itemDescription, timestamp: 0.0)
+        XCTAssertEqual(todoItem.timestamp, 0.0)
+    }
 }
