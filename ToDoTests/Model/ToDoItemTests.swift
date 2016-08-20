@@ -18,6 +18,8 @@ class ToDoItemTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        title = "Title"
+        itemDescription = "Description"
     }
     
     override func tearDown() {
@@ -26,12 +28,10 @@ class ToDoItemTests: XCTestCase {
     }
 
     func testInit_ShouldTakeTitle(){
-        title = "Title"
         _ = ToDoItem(title : title)
     }
 
     func testInit_ShouldTakeDescription(){
-        title = "Title"
         _ = ToDoItem(title: title, description: "description")
     }
 
@@ -42,23 +42,25 @@ class ToDoItemTests: XCTestCase {
     }
 
     func testInit_ShouldSetDescription(){
-        title = "Title"
-        itemDescription = "Description"
         let todoItem = ToDoItem(title: title, description: itemDescription)
         XCTAssertEqual(todoItem.itemDescription, itemDescription)
     }
 
     func testInit_ShouldSetAnotherDescription(){
-        title = "Title"
         itemDescription = "Another Description"
         let todoItem = ToDoItem(title: title, description: itemDescription)
         XCTAssertEqual(todoItem.itemDescription, itemDescription)
     }
 
     func testInit_ShouldSetTimeStamp(){
-        title = "Title"
-        itemDescription = "Description"
         let todoItem = ToDoItem(title: title, description: itemDescription, timestamp: 0.0)
         XCTAssertEqual(todoItem.timestamp, 0.0)
+    }
+
+    func testInit_ShouldSetLocation(){
+        let location = Location(name: "Location")
+        let todoItem = ToDoItem(title: title, description: itemDescription, timestamp: 0.0, location: location)
+        XCTAssertEqual(todoItem.location?.name, "Location")
+
     }
 }
