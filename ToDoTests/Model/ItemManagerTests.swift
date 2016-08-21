@@ -13,10 +13,14 @@ import XCTest
 class ItemManagerTests: XCTestCase {
 
     var itemManager: ItemManager!
+    var firstItem: ToDoItem!
+    var secondItem: ToDoItem!
 
     override func setUp() {
         super.setUp()
         itemManager = ItemManager()
+        firstItem = ToDoItem(title: "Item Name")
+        secondItem = ToDoItem(title: "Item Name 2")
     }
     
     override func tearDown() {
@@ -33,28 +37,26 @@ class ItemManagerTests: XCTestCase {
     }
 
     func testToDoCount_AfterAddingOneItem_ShouldBeOne(){
-        itemManager.addItem(ToDoItem(title: "Item Name"))
+        itemManager.addItem(firstItem)
         XCTAssertEqual(itemManager.toDoCount, 1)
     }
 
     func testToDoCount_AfterAddTwoItem_ShouldBeTwo(){
-        itemManager.addItem(ToDoItem(title: "Item Name"))
-        itemManager.addItem(ToDoItem(title: "Item Name 2"))
+        itemManager.addItem(firstItem)
+        itemManager.addItem(secondItem)
         XCTAssertEqual(itemManager.toDoCount, 2)
     }
 
     func testItemAtIndex_ShouldReturnToDoItem(){
-        itemManager.addItem(ToDoItem(title: "Item Name"))
+        itemManager.addItem(firstItem)
         let item = itemManager.itemAtIndex(0)
-        XCTAssertEqual(item.title, "Item Name")
+        XCTAssertEqual(item.title, firstItem.title)
     }
 
     func testItemAtIndex_ShouldReturnSecondToDoItem(){
-        let first = ToDoItem(title: "Item Name")
-        let second = ToDoItem(title: "Item Name 2")
-        itemManager.addItem(first)
-        itemManager.addItem(second)
+        itemManager.addItem(firstItem)
+        itemManager.addItem(secondItem)
         let item = itemManager.itemAtIndex(1)
-        XCTAssertEqual(item.title, second.title)
+        XCTAssertEqual(item.title, secondItem.title)
     }
 }
