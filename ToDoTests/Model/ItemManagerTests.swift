@@ -74,4 +74,11 @@ class ItemManagerTests: XCTestCase {
         XCTAssertEqual(itemManager.doneCount, 2)
     }
 
+    func testCheckItemAtIndex_ShouldRemoveToDoItemAtThatIndex(){
+        itemManager.addItem(firstItem)
+        itemManager.addItem(secondItem)
+        itemManager.checkItemAtIndex(0)
+        let item = itemManager.itemAtIndex(0)
+        XCTAssertEqual(item.title, secondItem.title)
+    }
 }
