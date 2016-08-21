@@ -25,6 +25,6 @@ class ItemManager {
     }
 
     func checkItemAtIndex(index: Int) {
-        doneCount = 1
+        doneCount += 1
     }
 }

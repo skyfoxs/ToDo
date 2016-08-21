@@ -65,4 +65,12 @@ class ItemManagerTests: XCTestCase {
         itemManager.checkItemAtIndex(0)
         XCTAssertEqual(itemManager.doneCount, 1)
     }
+
+    func testDoneCount_AfterCheckTwoItem_ShouldBeTwo(){
+        itemManager.addItem(firstItem)
+        itemManager.addItem(secondItem)
+        itemManager.checkItemAtIndex(1)
+        itemManager.checkItemAtIndex(0)
+        XCTAssertEqual(itemManager.doneCount, 2)
+    }
 }
