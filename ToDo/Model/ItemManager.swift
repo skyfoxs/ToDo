@@ -9,7 +9,7 @@
 import Foundation
 
 class ItemManager {
-    var toDoItems = [ToDoItem]()
+    private var toDoItems = [ToDoItem]()
     var toDoCount: Int {
         return toDoItems.count
     }
