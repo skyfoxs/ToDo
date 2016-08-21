@@ -31,4 +31,9 @@ class ItemManagerTests: XCTestCase {
     func testDoneCount_Initially_ShouldBeZero() {
         XCTAssertEqual(itemManager.doneCount, 0)
     }
+
+    func testToDoCount_AfterAddingOneItem_ShouldBeOne(){
+        itemManager.addItem(ToDoItem(title: "Item Name"))
+        XCTAssertEqual(itemManager.toDoCount, 1)
+    }
 }
