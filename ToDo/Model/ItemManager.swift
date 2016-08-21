@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ItemManager{
+class ItemManager {
     let toDoCount = 0
     let doneCount = 0
 }

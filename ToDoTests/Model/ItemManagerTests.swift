@@ -11,10 +11,12 @@ import XCTest
 @testable import ToDo
 
 class ItemManagerTests: XCTestCase {
-    
+
+    var itemManager: ItemManager!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        itemManager = ItemManager()
     }
     
     override func tearDown() {
@@ -22,13 +24,11 @@ class ItemManagerTests: XCTestCase {
         super.tearDown()
     }
 
-    func testToDoCount_Initially_ShouldBeZero(){
-        let itemManager = ItemManager()
+    func testToDoCount_Initially_ShouldBeZero() {
         XCTAssertEqual(itemManager.toDoCount, 0)
     }
 
-    func testDoneCount_Initially_ShouldBeZero(){
-        let itemManager = ItemManager()
+    func testDoneCount_Initially_ShouldBeZero() {
         XCTAssertEqual(itemManager.doneCount, 0)
     }
 }
