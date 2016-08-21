@@ -14,7 +14,7 @@ class ItemManager {
         return toDoItems.count
     }
 
-    let doneCount = 0
+    var doneCount = 0
 
     func addItem(item: ToDoItem) {
         toDoItems.append(item)
@@ -22,5 +22,9 @@ class ItemManager {
 
     func itemAtIndex(index: Int) -> ToDoItem {
         return toDoItems[index]
+    }
+
+    func checkItemAtIndex(index: Int) {
+        doneCount = 1
     }
 }
