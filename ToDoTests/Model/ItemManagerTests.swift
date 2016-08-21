@@ -48,4 +48,13 @@ class ItemManagerTests: XCTestCase {
         let item = itemManager.itemAtIndex(0)
         XCTAssertEqual(item.title, "Item Name")
     }
+
+    func testItemAtIndex_ShouldReturnSecondToDoItem(){
+        let first = ToDoItem(title: "Item Name")
+        let second = ToDoItem(title: "Item Name 2")
+        itemManager.addItem(first)
+        itemManager.addItem(second)
+        let item = itemManager.itemAtIndex(1)
+        XCTAssertEqual(item.title, second.title)
+    }
 }
