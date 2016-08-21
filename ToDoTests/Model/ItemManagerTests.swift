@@ -60,17 +60,18 @@ class ItemManagerTests: XCTestCase {
         XCTAssertEqual(item.title, secondItem.title)
     }
 
-    func testDoneCount_AfterCheckItem_ShouldBeOne(){
+    func testCheckItemAtIndex_AfterCheckOneItem_DoneCountShouldBeOne(){
         itemManager.addItem(firstItem)
         itemManager.checkItemAtIndex(0)
         XCTAssertEqual(itemManager.doneCount, 1)
     }
 
-    func testDoneCount_AfterCheckTwoItem_ShouldBeTwo(){
+    func testCheckItemAtIndex_AfterCheckTwoItem_DoneCountShouldBeTwo(){
         itemManager.addItem(firstItem)
         itemManager.addItem(secondItem)
         itemManager.checkItemAtIndex(1)
         itemManager.checkItemAtIndex(0)
         XCTAssertEqual(itemManager.doneCount, 2)
     }
+
 }
