@@ -26,4 +26,9 @@ class ItemManagerTests: XCTestCase {
         let itemManager = ItemManager()
         XCTAssertEqual(itemManager.toDoCount, 0)
     }
+
+    func testDoneCount_Initially_ShouldBeZero(){
+        let itemManager = ItemManager()
+        XCTAssertEqual(itemManager.doneCount, 0)
+    }
 }
