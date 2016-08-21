@@ -13,6 +13,6 @@ class ItemManager {
     let doneCount = 0
 
     func addItem(item: ToDoItem) {
-        toDoCount = 1
+        toDoCount += 1
     }
 }

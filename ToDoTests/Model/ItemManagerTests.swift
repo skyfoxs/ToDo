@@ -36,4 +36,10 @@ class ItemManagerTests: XCTestCase {
         itemManager.addItem(ToDoItem(title: "Item Name"))
         XCTAssertEqual(itemManager.toDoCount, 1)
     }
+
+    func testToDoCount_AfterAddTwoItem_ShouldBeTwo(){
+        itemManager.addItem(ToDoItem(title: "Item Name"))
+        itemManager.addItem(ToDoItem(title: "Item Name 2"))
+        XCTAssertEqual(itemManager.toDoCount, 2)
+    }
 }
