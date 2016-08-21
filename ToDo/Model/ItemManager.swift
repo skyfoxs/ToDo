@@ -13,8 +13,10 @@ class ItemManager {
     var toDoCount: Int {
         return toDoItems.count
     }
-
-    var doneCount = 0
+    private var doneItems = [ToDoItem]()
+    var doneCount: Int {
+        return doneItems.count
+    }
 
     func addItem(item: ToDoItem) {
         toDoItems.append(item)
@@ -25,7 +27,11 @@ class ItemManager {
     }
 
     func checkItemAtIndex(index: Int) {
-        toDoItems.removeAtIndex(index)
-        doneCount += 1
+        let item = toDoItems.removeAtIndex(index)
+        doneItems.append(item)
+    }
+
+    func doneItemAtIndex(index: Int) -> ToDoItem {
+        return doneItems[index]
     }
 }
