@@ -50,4 +50,10 @@ class LocationTests: XCTestCase {
         XCTAssertNotEqual(first, second)
     }
 
+    func testEqualLocation_ShouldNotBeEqual(){
+        let first = Location(name: "Test")
+        let second = Location(name: "Test 2")
+
+        XCTAssertNotEqual(first, second)
+    }
 }
