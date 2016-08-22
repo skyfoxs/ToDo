@@ -23,5 +23,11 @@ struct ToDoItem: Equatable {
 }
 
 func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+    let notEqual = [
+        lhs.itemDescription != rhs.itemDescription
+    ]
+    for match in notEqual where match {
+        return false
+    }
     return true
 }
