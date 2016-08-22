@@ -89,4 +89,19 @@ class ItemManagerTests: XCTestCase {
         let item = itemManager.doneItemAtIndex(0)
         XCTAssertEqual(item.title, secondItem.title)
     }
+
+    func testRemoveAllItems_ShouldRemoveToDoAndDoneItems(){
+        itemManager.addItem(firstItem)
+        itemManager.addItem(secondItem)
+        itemManager.checkItemAtIndex(1)
+        itemManager.removeAllItems()
+        XCTAssertEqual(itemManager.toDoCount, 0)
+        XCTAssertEqual(itemManager.doneCount, 0)
+    }
+
+    func testAddItem_ShouldNotAddDuplicateToDoItem(){
+        itemManager.addItem(firstItem)
+        itemManager.addItem(firstItem)
+        XCTAssertEqual(itemManager.toDoCount, 1)
+    }
 }
