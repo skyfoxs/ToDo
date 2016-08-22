@@ -60,7 +60,7 @@ class ToDoItemTests: XCTestCase {
     func testInit_ShouldSetLocation(){
         let location = Location(name: "Location")
         let todoItem = ToDoItem(title: title, description: itemDescription, timestamp: 0.0, location: location)
-        XCTAssertEqual(todoItem.location?.name, "Location")
+        XCTAssertEqual(todoItem.location, location)
     }
 
     func testEqualItem_ShouldBeEqual(){
