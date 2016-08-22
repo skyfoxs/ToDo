@@ -20,13 +20,13 @@ struct Location:Equatable {
 }
 
 func ==(lhs:Location, rhs:Location) -> Bool {
-    if lhs.coordinate?.latitude != rhs.coordinate?.latitude {
-        return false
-    }
-    if lhs.coordinate?.longitude != rhs.coordinate?.longitude {
-        return false
-    }
-    if lhs.name != rhs.name {
+    let notEqual = [
+        lhs.coordinate?.latitude != rhs.coordinate?.latitude,
+        lhs.coordinate?.longitude != rhs.coordinate?.longitude,
+        lhs.name != rhs.name
+    ]
+
+    for match in notEqual where match {
         return false
     }
     return true
