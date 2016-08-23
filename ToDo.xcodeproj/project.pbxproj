@@ -12,6 +12,8 @@
 		D8241EEE1D66FE8D003169EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8241EEC1D66FE8D003169EB /* Main.storyboard */; };
 		D8241EF01D66FE8D003169EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8241EEF1D66FE8D003169EB /* Assets.xcassets */; };
 		D8241EF31D66FE8D003169EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8241EF11D66FE8D003169EB /* LaunchScreen.storyboard */; };
+		D835556E1D6C47CB0048363A /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835556D1D6C47CB0048363A /* ItemListViewControllerTests.swift */; };
+		D83555701D6C484D0048363A /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835556F1D6C484D0048363A /* ItemListViewController.swift */; };
 		D8A0C9101D6700EC00F36E4C /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A0C90F1D6700EC00F36E4C /* ToDoItemTests.swift */; };
 		D8A0C9131D67017400F36E4C /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A0C9121D67017400F36E4C /* ToDoItem.swift */; };
 		D8A0C9181D68AC4400F36E4C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A0C9171D68AC4400F36E4C /* Location.swift */; };
@@ -40,6 +42,8 @@
 		D8241EF41D66FE8D003169EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8241EF91D66FE8D003169EB /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8241EFF1D66FE8D003169EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D835556D1D6C47CB0048363A /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewControllerTests.swift; path = Controller/ItemListViewControllerTests.swift; sourceTree = "<group>"; };
+		D835556F1D6C484D0048363A /* ItemListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemListViewController.swift; path = Controller/ItemListViewController.swift; sourceTree = "<group>"; };
 		D8A0C90F1D6700EC00F36E4C /* ToDoItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItemTests.swift; path = Model/ToDoItemTests.swift; sourceTree = "<group>"; };
 		D8A0C9121D67017400F36E4C /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItem.swift; path = Model/ToDoItem.swift; sourceTree = "<group>"; };
 		D8A0C9171D68AC4400F36E4C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Model/Location.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				D8241EEF1D66FE8D003169EB /* Assets.xcassets */,
 				D8241EF11D66FE8D003169EB /* LaunchScreen.storyboard */,
 				D8241EF41D66FE8D003169EB /* Info.plist */,
+				D835556F1D6C484D0048363A /* ItemListViewController.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			children = (
 				D8A0C9111D6700F200F36E4C /* Model */,
 				D8241EFF1D66FE8D003169EB /* Info.plist */,
+				D835556D1D6C47CB0048363A /* ItemListViewControllerTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				D8241EE91D66FE8D003169EB /* AppDelegate.swift in Sources */,
 				D8A0C9181D68AC4400F36E4C /* Location.swift in Sources */,
 				D8A0C9131D67017400F36E4C /* ToDoItem.swift in Sources */,
+				D83555701D6C484D0048363A /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +252,7 @@
 				D8FC0FCA1D69DDC90058D51C /* ItemManagerTests.swift in Sources */,
 				D8FC0FC81D69DAAC0058D51C /* LocationTests.swift in Sources */,
 				D8A0C9101D6700EC00F36E4C /* ToDoItemTests.swift in Sources */,
+				D835556E1D6C47CB0048363A /* ItemListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
