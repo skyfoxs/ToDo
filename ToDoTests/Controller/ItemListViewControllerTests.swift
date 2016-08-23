@@ -30,4 +30,14 @@ class ItemListViewControllerTests: XCTestCase {
 
         XCTAssertNotNil(controller.tableView)
     }
+
+    func testViewDidLoad_ShouldSetTableViewDataSource(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("ItemListViewController") as! ItemListViewController
+
+        _ = controller.view
+
+        XCTAssertNotNil(controller.tableView.dataSource)
+        XCTAssertTrue(controller.tableView.dataSource is ItemListDataProvider)
+    }
 }

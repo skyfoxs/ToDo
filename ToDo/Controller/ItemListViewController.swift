@@ -11,6 +11,11 @@ import UIKit
 class ItemListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dataProvider: UITableViewDataSource!
+
+    override func viewDidLoad() {
+        tableView.dataSource = dataProvider
+    }
 
     /*
     // MARK: - Navigation
