@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D8241EE91D66FE8D003169EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8241EE81D66FE8D003169EB /* AppDelegate.swift */; };
-		D8241EEB1D66FE8D003169EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8241EEA1D66FE8D003169EB /* ViewController.swift */; };
 		D8241EEE1D66FE8D003169EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8241EEC1D66FE8D003169EB /* Main.storyboard */; };
 		D8241EF01D66FE8D003169EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8241EEF1D66FE8D003169EB /* Assets.xcassets */; };
 		D8241EF31D66FE8D003169EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8241EF11D66FE8D003169EB /* LaunchScreen.storyboard */; };
@@ -35,7 +34,6 @@
 /* Begin PBXFileReference section */
 		D8241EE51D66FE8D003169EB /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8241EE81D66FE8D003169EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8241EEA1D66FE8D003169EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8241EED1D66FE8D003169EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8241EEF1D66FE8D003169EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8241EF21D66FE8D003169EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			children = (
 				D8A0C9141D67017B00F36E4C /* Model */,
 				D8241EE81D66FE8D003169EB /* AppDelegate.swift */,
-				D8241EEA1D66FE8D003169EB /* ViewController.swift */,
 				D8241EEC1D66FE8D003169EB /* Main.storyboard */,
 				D8241EEF1D66FE8D003169EB /* Assets.xcassets */,
 				D8241EF11D66FE8D003169EB /* LaunchScreen.storyboard */,
@@ -236,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8241EEB1D66FE8D003169EB /* ViewController.swift in Sources */,
 				D8FC0FCC1D69DE900058D51C /* ItemManager.swift in Sources */,
 				D8241EE91D66FE8D003169EB /* AppDelegate.swift in Sources */,
 				D8A0C9181D68AC4400F36E4C /* Location.swift in Sources */,

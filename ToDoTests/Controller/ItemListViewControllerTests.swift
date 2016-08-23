@@ -23,8 +23,11 @@ class ItemListViewControllerTests: XCTestCase {
     }
     
     func test_TableViewShoudNotNil() {
-        let controller = ItemListViewController()
-        _ = controller.view
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("ItemListViewController") as! ItemListViewController
+
+        _ = controller.view // This load view so IBOutlet is connected
+
         XCTAssertNotNil(controller.tableView)
     }
 }
